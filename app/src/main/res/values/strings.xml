@@ -1,0 +1,19 @@
+<resources>
+
+  <string name="app_name">RxExample</string>
+
+  <string name="selector_title">Pick One</string>
+  <string name="selector_callback">Callback implementation</string>
+  <string name="selector_rx_ok">Rx implementation Ok</string>
+  <string name="selector_rx_fail">Rx implementation Fail</string>
+
+  <string name="title_market_list">Melotic Markets</string>
+  <string name="title_market_list_rx_ok">Melotic Markets Rx Ok</string>
+  <string name="title_market_list_rx_fail">Melotic Markets Rx Fail</string>
+
+  <string name="title_market_depth">%1$s Market Depth %2$s</string>
+
+  <string name="action_settings">Settings</string>
+
+
+</resources>

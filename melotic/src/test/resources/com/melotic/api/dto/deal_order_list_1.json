@@ -1,0 +1,14 @@
+[
+    {
+        "id": 12091307,
+        "state": "dealt",
+        "verb": "buy",
+        "price": "0.00853955",
+        "total": "0.00888113",
+        "amount": "1.04",
+        "market_id":"ltc-btc",
+        "deal_amount":"1.04",
+        "deal_price":"0.00853955",
+        "dealt_at":"2014-12-26T03:17:21.000Z"
+    }
+]
