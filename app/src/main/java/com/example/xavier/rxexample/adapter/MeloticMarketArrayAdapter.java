@@ -13,12 +13,12 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MarketArrayAdapter extends ArrayAdapter<Market>
+public class MeloticMarketArrayAdapter extends ArrayAdapter<Market>
 {
     private final Map<MarketId, DealOrder> latestDealOrders;
     private final DateFormat dateFormat;
 
-    public MarketArrayAdapter(Context context)
+    public MeloticMarketArrayAdapter(Context context)
     {
         super(context, android.R.layout.simple_list_item_2, android.R.id.text1);
         this.latestDealOrders = new HashMap<>();

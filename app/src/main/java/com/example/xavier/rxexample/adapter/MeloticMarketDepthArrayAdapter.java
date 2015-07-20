@@ -7,9 +7,9 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import com.melotic.api.dto.MarketDepth;
 
-public class MarketDepthArrayAdapter extends ArrayAdapter<MarketDepth>
+public class MeloticMarketDepthArrayAdapter extends ArrayAdapter<MarketDepth>
 {
-    public MarketDepthArrayAdapter(Context context)
+    public MeloticMarketDepthArrayAdapter(Context context)
     {
         super(context, android.R.layout.simple_list_item_2, android.R.id.text1);
     }

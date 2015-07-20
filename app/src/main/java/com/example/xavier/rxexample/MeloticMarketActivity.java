@@ -4,12 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.example.xavier.rxexample.adapter.MarketDepthArrayAdapter;
+import com.example.xavier.rxexample.adapter.MeloticMarketDepthArrayAdapter;
 import com.melotic.api.dto.DealVerb;
 import com.melotic.api.dto.MarketDepth;
 import com.melotic.api.dto.MarketId;
@@ -19,7 +19,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class MeloticMarketActivity extends ActionBarActivity
+public class MeloticMarketActivity extends AppCompatActivity
 {
     public static final String EXTRA_MARKET_ID = "marketId";
     public static final String EXTRA_DEAL_VERB = "dealVerb";
@@ -27,7 +27,7 @@ public class MeloticMarketActivity extends ActionBarActivity
     private MarketId marketId;
     private DealVerb verb;
     private MeloticService meloticService;
-    private MarketDepthArrayAdapter arrayAdapter;
+    private MeloticMarketDepthArrayAdapter arrayAdapter;
 
     public static Intent getMarketDepthIntent(Context context, MarketId marketId, DealVerb verb)
     {
@@ -43,7 +43,7 @@ public class MeloticMarketActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_melotic_market_list);
         meloticService = new MeloticService();
-        arrayAdapter = new MarketDepthArrayAdapter(this);
+        arrayAdapter = new MeloticMarketDepthArrayAdapter(this);
         ListView listView = (ListView) findViewById(android.R.id.list);
         listView.setAdapter(arrayAdapter);
         marketId = new MarketId(getIntent().getStringExtra(EXTRA_MARKET_ID));
@@ -53,7 +53,7 @@ public class MeloticMarketActivity extends ActionBarActivity
 
     @Override public boolean onCreateOptionsMenu(Menu menu)
     {
-        getMenuInflater().inflate(R.menu.menu_melotic_market_list, menu);
+        getMenuInflater().inflate(R.menu.menu_generic, menu);
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null)
         {

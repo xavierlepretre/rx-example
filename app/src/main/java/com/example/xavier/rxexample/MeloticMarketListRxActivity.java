@@ -3,14 +3,14 @@ package com.example.xavier.rxexample;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.example.xavier.rx.SimpleAlertDialogOperator;
-import com.example.xavier.rxexample.adapter.MarketArrayAdapter;
+import com.example.xavier.rxexample.adapter.MeloticMarketArrayAdapter;
 import com.melotic.api.dto.DealOrder;
 import com.melotic.api.dto.DealVerb;
 import com.melotic.api.dto.Market;
@@ -30,10 +30,10 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.internal.util.SubscriptionList;
 
-abstract public class MeloticMarketListRxActivity extends ActionBarActivity
+abstract public class MeloticMarketListRxActivity extends AppCompatActivity
 {
     protected MeloticServiceRx meloticServiceRx;
-    private MarketArrayAdapter arrayAdapter;
+    private MeloticMarketArrayAdapter arrayAdapter;
     private SubscriptionList subscriptions;
 
     @Override protected void onCreate(Bundle savedInstanceState)
@@ -42,7 +42,7 @@ abstract public class MeloticMarketListRxActivity extends ActionBarActivity
         setContentView(R.layout.activity_melotic_market_list);
         subscriptions = new SubscriptionList();
         meloticServiceRx = new MeloticServiceRx();
-        arrayAdapter = new MarketArrayAdapter(this);
+        arrayAdapter = new MeloticMarketArrayAdapter(this);
         ListView listView = (ListView) findViewById(android.R.id.list);
         listView.setAdapter(arrayAdapter);
         fetchMarkets();
@@ -51,7 +51,7 @@ abstract public class MeloticMarketListRxActivity extends ActionBarActivity
 
     @Override public boolean onCreateOptionsMenu(Menu menu)
     {
-        getMenuInflater().inflate(R.menu.menu_melotic_market_list, menu);
+        getMenuInflater().inflate(R.menu.menu_generic, menu);
         return true;
     }
 

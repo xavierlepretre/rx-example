@@ -3,14 +3,14 @@ package com.example.xavier.rxexample;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.example.xavier.rxexample.adapter.MarketArrayAdapter;
+import com.example.xavier.rxexample.adapter.MeloticMarketArrayAdapter;
 import com.melotic.api.dto.DealOrder;
 import com.melotic.api.dto.DealVerb;
 import com.melotic.api.dto.Market;
@@ -23,17 +23,17 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-public class MeloticMarketListActivity extends ActionBarActivity
+public class MeloticMarketListActivity extends AppCompatActivity
 {
     private MeloticService meloticService;
-    private MarketArrayAdapter arrayAdapter;
+    private MeloticMarketArrayAdapter arrayAdapter;
 
     @Override protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_melotic_market_list);
         meloticService = new MeloticService();
-        arrayAdapter = new MarketArrayAdapter(this);
+        arrayAdapter = new MeloticMarketArrayAdapter(this);
         ListView listView = (ListView) findViewById(android.R.id.list);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
@@ -47,7 +47,7 @@ public class MeloticMarketListActivity extends ActionBarActivity
 
     @Override public boolean onCreateOptionsMenu(Menu menu)
     {
-        getMenuInflater().inflate(R.menu.menu_melotic_market_list, menu);
+        getMenuInflater().inflate(R.menu.menu_generic, menu);
         return true;
     }
 
