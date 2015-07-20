@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
   compileSdkVersion 21
-  buildToolsVersion "21.1.2"
+  buildToolsVersion "22.0.1"
 
   defaultConfig {
     applicationId "com.example.xavier.rxexample"
     minSdkVersion 15
-    targetSdkVersion 21
+    targetSdkVersion 22
     versionCode 1
     versionName "1.0"
   }
@@ -26,7 +26,7 @@ android {
 
 dependencies {
   compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:21.0.3'
+  compile 'com.android.support:appcompat-v7:22.2.0'
 
   compile ('com.squareup.retrofit:retrofit:1.9.0') {
     exclude group: 'com.google.code.gson', module: 'gson'
@@ -39,6 +39,10 @@ dependencies {
   compile 'com.fasterxml.jackson.core:jackson-core:2.5.0'
 
   compile (project(':melotic')) {
+    exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+  }
+
+  compile (project(':bter')) {
     exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
   }
 
