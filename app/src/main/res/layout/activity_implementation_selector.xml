@@ -10,6 +10,46 @@
     >
 
   <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+      android:text="@string/bter_example"
+      />
+
+  <TextView
+      android:id="@+id/text4"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/selector_callback"
+      android:textAppearance="?android:attr/textAppearanceListItem"
+      android:minHeight="?android:attr/listPreferredItemHeight"
+      android:mode="twoLine"
+      android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+      android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+      android:gravity="center_vertical"
+      />
+
+  <TextView
+      android:id="@+id/text5"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="@string/selector_rx_ok"
+      android:textAppearance="?android:attr/textAppearanceListItem"
+      android:minHeight="?android:attr/listPreferredItemHeight"
+      android:mode="twoLine"
+      android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+      android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+      android:gravity="center_vertical"
+      />
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+      android:text="@string/melotic_example"
+      />
+
+  <TextView
       android:id="@android:id/text1"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"

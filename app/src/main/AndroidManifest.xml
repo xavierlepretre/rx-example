@@ -45,6 +45,16 @@
         android:label="@string/title_market_list_rx_fail"
         />
 
+    <activity
+        android:name=".BterTradingPairListActivity"
+        android:label="@string/title_bter_trading_pairs"
+        />
+
+    <activity
+        android:name=".BterTradingPairListRxActivity"
+        android:label="@string/title_bter_trading_pairs_rx"
+        />
+
   </application>
 
 </manifest>
