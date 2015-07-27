@@ -19,9 +19,14 @@ public class MeloticService
 
     public MeloticService()
     {
-        this.service = MeloticRestAdapter.builder()
+        this(MeloticRestAdapter.builder()
                 .build()
-                .create(MeloticServiceRetrofit.class);
+                .create(MeloticServiceRetrofit.class));
+    }
+
+    public MeloticService(MeloticServiceRetrofit service)
+    {
+        this.service = service;
     }
 
     public void getMarkets(final Callback<MarketMap> callback)

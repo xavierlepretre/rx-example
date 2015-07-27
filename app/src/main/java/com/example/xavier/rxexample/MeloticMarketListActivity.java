@@ -17,6 +17,7 @@ import com.melotic.api.dto.Market;
 import com.melotic.api.dto.MarketDealOrderList;
 import com.melotic.api.dto.MarketId;
 import com.melotic.api.dto.MarketMap;
+import com.melotic.api.service.DummyMeloticService;
 import com.melotic.api.service.MeloticService;
 import java.util.Iterator;
 import retrofit.Callback;
@@ -32,7 +33,7 @@ public class MeloticMarketListActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_melotic_market_list);
-        meloticService = new MeloticService();
+        meloticService = new DummyMeloticService();
         arrayAdapter = new MeloticMarketArrayAdapter(this);
         ListView listView = (ListView) findViewById(android.R.id.list);
         listView.setAdapter(arrayAdapter);

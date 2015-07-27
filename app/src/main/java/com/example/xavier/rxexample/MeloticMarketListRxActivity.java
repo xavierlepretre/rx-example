@@ -20,6 +20,7 @@ import com.melotic.api.dto.MarketDealVerb;
 import com.melotic.api.dto.MarketId;
 import com.melotic.api.dto.MarketMap;
 import com.melotic.api.dto.OrderBy;
+import com.melotic.api.service.DummyMeloticServiceRx;
 import com.melotic.api.service.MeloticServiceRx;
 import java.util.Collection;
 import rx.Observable;
@@ -41,7 +42,7 @@ abstract public class MeloticMarketListRxActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_melotic_market_list);
         subscriptions = new SubscriptionList();
-        meloticServiceRx = new MeloticServiceRx();
+        meloticServiceRx = new DummyMeloticServiceRx();
         arrayAdapter = new MeloticMarketArrayAdapter(this);
         ListView listView = (ListView) findViewById(android.R.id.list);
         listView.setAdapter(arrayAdapter);
