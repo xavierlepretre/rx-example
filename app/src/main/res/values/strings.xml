@@ -1,25 +1,29 @@
-<resources>
+<resources
+    xmlns:xliff="http://schemas.android.com/apk/res/android">
 
-  <string name="app_name">RxExample</string>
+    <string name="app_name">RxExample</string>
 
-  <string name="melotic_example">Melotic</string>
+    <string name="melotic_example">Melotic</string>
 
-  <string name="selector_title">Pick One</string>
-  <string name="selector_callback">Callback implementation</string>
-  <string name="selector_rx_ok">Rx implementation Ok</string>
-  <string name="selector_rx_fail">Rx implementation Fail</string>
+    <string name="selector_title">Pick One</string>
+    <string name="selector_callback">Callback implementation</string>
+    <string name="selector_rx_ok">Rx implementation Ok</string>
+    <string name="selector_rx_fail">Rx implementation Fail</string>
 
-  <string name="title_market_list">Melotic Markets</string>
-  <string name="title_market_list_rx_ok">Melotic Markets Rx Ok</string>
-  <string name="title_market_list_rx_fail">Melotic Markets Rx Fail</string>
+    <string name="title_market_list">Melotic Markets</string>
+    <string name="title_market_list_rx_ok">Melotic Markets Rx Ok</string>
+    <string name="title_market_list_rx_fail">Melotic Markets Rx Fail</string>
 
-  <string name="title_market_depth">%1$s Market Depth %2$s</string>
+  <string name="title_market_depth">
+    <xliff:g example="buy" id="verb">%1$s</xliff:g> Market Depth
+      <xliff:g example="btc-cny" id="marketId">%2$s</xliff:g>
+  </string>
 
-  <string name="bter_example">Bter</string>
+    <string name="bter_example">Bter</string>
 
-  <string name="title_bter_trading_pairs">Bter Trading Pairs</string>
-  <string name="title_bter_trading_pairs_rx">Bter Trading Pairs Rx</string>
+    <string name="title_bter_trading_pairs">Bter Trading Pairs</string>
+    <string name="title_bter_trading_pairs_rx">Bter Trading Pairs Rx</string>
 
-  <string name="action_settings">Settings</string>
+    <string name="action_settings">Settings</string>
 
 </resources>
